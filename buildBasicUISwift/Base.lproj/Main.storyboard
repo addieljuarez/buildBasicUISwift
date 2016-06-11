@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -14,46 +15,69 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="600" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="gZZ-p7-NKm">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="VzS-Z7-Zu4">
                                 <rect key="frame" x="20" y="69" width="560" height="81"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="meal name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ci5-L3-0p2">
-                                        <rect key="frame" x="0.0" y="0.0" width="84" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aYQ-RH-qdm">
-                                        <rect key="frame" x="0.0" y="21" width="560" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SaK-WT-Pn5">
-                                        <rect key="frame" x="0.0" y="51" width="141" height="30"/>
-                                        <state key="normal" title="Set default label text"/>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="gZZ-p7-NKm">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="81"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="meal name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ci5-L3-0p2">
+                                                <rect key="frame" x="0.0" y="0.0" width="84" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aYQ-RH-qdm">
+                                                <rect key="frame" x="0.0" y="21" width="560" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SaK-WT-Pn5">
+                                                <rect key="frame" x="0.0" y="51" width="141" height="30"/>
+                                                <state key="normal" title="Set default label text"/>
+                                                <connections>
+                                                    <action selector="setDefaultlabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dQ3-hE-9lc"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="aYQ-RH-qdm" secondAttribute="trailing" id="dET-Yd-6tU"/>
+                                            <constraint firstItem="aYQ-RH-qdm" firstAttribute="leading" secondItem="gZZ-p7-NKm" secondAttribute="leading" id="s6f-w6-LDO"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="aYQ-RH-qdm" secondAttribute="trailing" id="uM2-Hw-cOI"/>
-                                    <constraint firstItem="aYQ-RH-qdm" firstAttribute="leading" secondItem="gZZ-p7-NKm" secondAttribute="leading" id="wpX-oP-BSs"/>
+                                    <constraint firstAttribute="width" secondItem="VzS-Z7-Zu4" secondAttribute="height" multiplier="560:81" id="OPf-sh-awC"/>
+                                    <constraint firstAttribute="width" secondItem="VzS-Z7-Zu4" secondAttribute="height" multiplier="560:81" id="hUI-F8-Lyv"/>
                                 </constraints>
                             </stackView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" translatesAutoresizingMaskIntoConstraints="NO" id="d88-Ad-JEz">
+                                <rect key="frame" x="20" y="158" width="320" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="d88-Ad-JEz" secondAttribute="height" multiplier="1:1" id="GAH-Vu-Ch4"/>
+                                    <constraint firstAttribute="width" secondItem="d88-Ad-JEz" secondAttribute="height" multiplier="1:1" id="iUX-aE-3ws"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="gZZ-p7-NKm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8mq-wE-fkQ"/>
-                            <constraint firstItem="gZZ-p7-NKm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="49" id="Kyc-hi-hSA"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="gZZ-p7-NKm" secondAttribute="trailing" id="fmp-Wu-hS7"/>
+                            <constraint firstItem="VzS-Z7-Zu4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="W9G-Vm-NXI"/>
+                            <constraint firstItem="VzS-Z7-Zu4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="49" id="g8H-aX-fzX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VzS-Z7-Zu4" secondAttribute="trailing" id="sqf-Ot-9Ep"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameNameLabel" destination="Ci5-L3-0p2" id="I8t-sc-zfq"/>
+                        <outlet property="nameTextField" destination="aYQ-RH-qdm" id="41I-m0-BeP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="387"/>
+            <point key="canvasLocation" x="263" y="466"/>
         </scene>
     </scenes>
 </document>
