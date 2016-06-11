@@ -19,24 +19,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="VzS-Z7-Zu4">
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="VzS-Z7-Zu4">
                                 <rect key="frame" x="20" y="69" width="560" height="81"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="gZZ-p7-NKm">
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="gZZ-p7-NKm">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="81"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="meal name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ci5-L3-0p2">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="meal name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ci5-L3-0p2">
                                                 <rect key="frame" x="0.0" y="0.0" width="84" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aYQ-RH-qdm">
-                                                <rect key="frame" x="0.0" y="21" width="560" height="31"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aYQ-RH-qdm">
+                                                <rect key="frame" x="0.0" y="21" width="560" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SaK-WT-Pn5">
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SaK-WT-Pn5">
                                                 <rect key="frame" x="0.0" y="51" width="141" height="30"/>
                                                 <state key="normal" title="Set default label text"/>
                                                 <connections>
@@ -50,32 +50,41 @@
                                         </constraints>
                                     </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="VzS-Z7-Zu4" secondAttribute="height" multiplier="560:81" id="OPf-sh-awC"/>
-                                    <constraint firstAttribute="width" secondItem="VzS-Z7-Zu4" secondAttribute="height" multiplier="560:81" id="hUI-F8-Lyv"/>
-                                </constraints>
                             </stackView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" translatesAutoresizingMaskIntoConstraints="NO" id="d88-Ad-JEz">
                                 <rect key="frame" x="20" y="158" width="320" height="320"/>
+                                <color key="backgroundColor" white="0.74665948280000005" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="d88-Ad-JEz" secondAttribute="height" multiplier="1:1" id="GAH-Vu-Ch4"/>
                                     <constraint firstAttribute="width" secondItem="d88-Ad-JEz" secondAttribute="height" multiplier="1:1" id="iUX-aE-3ws"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="quV-Zu-Vq4" appends="YES" id="7gP-b9-pD1"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="d88-Ad-JEz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="5Xj-xu-Uvu"/>
                             <constraint firstItem="VzS-Z7-Zu4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="W9G-Vm-NXI"/>
                             <constraint firstItem="VzS-Z7-Zu4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="49" id="g8H-aX-fzX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VzS-Z7-Zu4" secondAttribute="trailing" id="sqf-Ot-9Ep"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="d88-Ad-JEz" secondAttribute="trailing" id="zbg-K9-hrI"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="nameNameLabel" destination="Ci5-L3-0p2" id="I8t-sc-zfq"/>
                         <outlet property="nameTextField" destination="aYQ-RH-qdm" id="41I-m0-BeP"/>
+                        <outlet property="photoImageView" destination="d88-Ad-JEz" id="3r8-YK-B1i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="quV-Zu-Vq4">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="2m3-nH-zFi"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="263" y="466"/>
         </scene>
